@@ -1,4 +1,4 @@
-require('./connections/node_modules/dotenv/lib/main').config()
+require('dotenv').config()
 const express = require('express')
 const rotas = require('./routes/route')
 const cors = require('cors')
@@ -10,8 +10,9 @@ app.use(cors())
 app.use(rotas)
 
 const port = process.env.PORT || 3000
+console.log(port);
 
 app.listen(port, () => {
-    console.log(`Servidor esta ativa na porta ${port}`);
+    console.log(`Servidor esta ativo na porta ${port}`);
 })
 
