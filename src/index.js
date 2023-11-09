@@ -10,7 +10,6 @@ app.use(cors())
 app.use(rotas)
 
 const port = process.env.PORT || 3000
-console.log(port);
 
 app.listen(port, () => {
     console.log(`Servidor esta ativo na porta ${port}`);
